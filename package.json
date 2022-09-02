@@ -8,7 +8,7 @@
     "node": "16.14.2"
   },
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
