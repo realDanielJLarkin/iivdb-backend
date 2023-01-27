@@ -15,8 +15,9 @@ app.use('/videos', videoRoutes)
 
 mongoose.connect('mongodb+srv://daniel:daniel123@cluster0.d6afn4s.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen((`0.0.0.0:$PORT`), () => {
-            console.log(`CONNECTED ON 5000`)
+        const PORT = process.env.PORT || 5000
+        app.listen((PORT), () => {
+            console.log(`CONNECTED ON ${PORT}`)
         })
     })
     .catch((error) =>
